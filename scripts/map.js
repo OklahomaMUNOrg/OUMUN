@@ -14,7 +14,7 @@ if (mapWrap) {
   const tip = mapWrap.querySelector('.map-tip');
 
   // The map drawing lives in images/world-map.svg and is loaded in here so each country can be styled.
-  fetch('images/world-map.svg')
+  fetch('../images/world-map.svg')
     .then(res => { if (!res.ok) throw new Error(res.status); return res.text(); })
     .then(svgText => { holder.innerHTML = svgText; setupMap(); })
     .catch(() => {
