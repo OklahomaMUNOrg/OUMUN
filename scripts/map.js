@@ -4,6 +4,10 @@
 const REPRESENTED = [
   // 'France',
   // 'Japan',
+  'Ukraine',
+  'China',
+  'France',
+  'India'
 ];
 
 const mapWrap = document.querySelector('.map-wrap');
