@@ -62,7 +62,6 @@ a:hover { color: var(--crimson); }
 .card { padding: 28px; background: var(--gray); border-top: 4px solid var(--blue); }
 .card h3 { margin: 0 0 12px; font-size: 20px; }
 .card p { margin: 0; line-height: 1.6; color: #4a4343; }
-.officer img { display: block; width: 120px; height: 120px; margin-bottom: 16px; border-radius: 50%; object-fit: cover; background: #d8d3ce; }
 .contact-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 48px; }
 .contact-info h3 { margin: 0 0 4px; }
 .contact-info p { margin: 0 0 24px; color: #4a4343; }
@@ -110,7 +109,7 @@ h1, h2, h3 { font-family: var(--font-display); }
 
 /* Slow zoom on hero photos */
 @keyframes slow-zoom { from { transform: scale(1); } to { transform: scale(1.1); } }
-.hero-img, .page-hero-img { animation: slow-zoom 18s ease-out forwards; }
+.hero-img, .page-hero-img { animation: slow-zoom 30s ease-out forwards; }
 @media (prefers-reduced-motion: reduce) { .hero-img, .page-hero-img { animation: none; } }
 
 /* About: alternating photo and text bands */
@@ -139,7 +138,8 @@ h1, h2, h3 { font-family: var(--font-display); }
 .footer-brand p { margin: 16px 0 0; max-width: 320px; }
 .footer-logo { display: flex; align-items: center; justify-content: center; width: 80px; height: 80px; padding: 6px; border-radius: 50%; background: var(--crimson); }
 .footer-logo img { width: 100%; height: 100%; object-fit: contain; }
-.footer-bottom { max-width: 1100px; margin: 48px auto 0; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.18); font-size: 14px; color: #bda9a9; }
+.footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; max-width: 1100px; margin: 48px auto 0; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.18); font-size: 14px; color: #bda9a9; }
+.footer-bottom p { margin: 0; }
 @media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
 
 /* Search page */
@@ -172,6 +172,7 @@ h1, h2, h3 { font-family: var(--font-display); }
 .form-embed iframe { display: block; width: 100%; height: 760px; border: 0; background: #fff; }
 .form-fallback { margin: 12px 0 0; font-size: 15px; color: #4a4343; }
 .form-fallback a { color: var(--blue); font-weight: 600; }
+
 /* Mobile menu (hamburger) */
 .menu-toggle { display: none; position: relative; width: 48px; height: 48px; padding: 0; border: 2px solid var(--crimson); border-radius: 8px; background: #fff; cursor: pointer; }
 .menu-toggle .bars { position: absolute; top: 50%; left: 50%; width: 22px; height: 3px; margin: -1.5px 0 0 -11px; background: var(--crimson); transition: background 0.2s; }
@@ -216,3 +217,39 @@ h1, h2, h3 { font-family: var(--font-display); }
 .faq p { margin: 0 0 22px; max-width: 720px; line-height: 1.7; color: #4a4343; }
 .faq p a, .faq-more a { color: var(--blue); font-weight: 600; }
 .faq-more { margin: 32px 0 0; }
+
+/* Countries we've represented (home page map) */
+.map-section { padding: 72px 8% 88px; text-align: center; }
+.map-section h2 { margin: 0 0 16px; font-size: clamp(30px, 3.5vw, 44px); font-weight: 700; }
+.map-section .lead { margin: 0 auto 32px; text-align: center; }
+.map-wrap { position: relative; max-width: 1100px; margin: 0 auto; }
+.map-wrap svg { display: block; width: 100%; height: auto; }
+.map-wrap path { fill: var(--gray); stroke: #fff; stroke-width: 0.6; transition: fill 0.15s; }
+.map-wrap path:hover { fill: var(--blue-light); }
+.map-wrap path.visited { fill: var(--crimson); }
+.map-wrap path.visited:hover { fill: #6a1112; }
+.map-tip { position: absolute; z-index: 2; padding: 6px 10px; border-radius: 4px; background: #2b1416; color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; pointer-events: none; opacity: 0; transform: translate(-50%, -130%); transition: opacity 0.1s; }
+.map-tip.show { opacity: 1; }
+.map-count { margin: 28px 0 0; font-weight: 700; color: var(--crimson); }
+.map-count:empty { display: none; }
+.country-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 900px; margin: 16px auto 0; padding: 0; list-style: none; }
+.country-list li { padding: 6px 14px; border-radius: 999px; background: var(--tint); font-size: 15px; font-weight: 600; }
+.country-list:empty { display: none; }
+.map-svg { aspect-ratio: 960 / 500; }
+.map-note { padding-top: 40px; color: #4a4343; }
+
+/* Executive team cards: photo with a bio that appears on hover, tap, or keyboard focus */
+.officer { position: relative; padding: 0; overflow: hidden; background: #fff; border: 1px solid var(--gray); border-top: 4px solid var(--blue); }
+.officer-photo { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: #d8d3ce; }
+.officer-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.officer .bio {
+  position: absolute; inset: 0; display: flex; align-items: center; margin: 0; padding: 24px;
+  background: rgba(132, 22, 23, 0.94); color: #fff; font-size: 15px; line-height: 1.6;
+  opacity: 0; transform: translateY(12px); transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.officer h3 { margin: 20px 24px 4px; font-size: 22px; }
+.officer .role { margin: 0 24px 24px; font-weight: 600; color: var(--blue); }
+@media (hover: hover) { .officer:hover .bio { opacity: 1; transform: none; } }
+.officer:focus-visible { outline: 3px solid var(--blue-light); outline-offset: 2px; }
+.officer:focus-visible .bio, .officer.open .bio { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .officer .bio { transition: none; transform: none; } }

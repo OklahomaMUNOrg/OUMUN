@@ -8,17 +8,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<script src="script.js" defer></script>
+<script src="scripts/script.js" defer></script>
+<script src="scripts/map.js" defer></script>
  <link rel="icon" type="image/png" href="images/logo.png">
   <meta property="og:title" content="Home — OU Model UN">
   <meta property="og:description" content="Welcome to OU Model UN! We are dedicated to spreading awareness of global affairs, one student at a time.">
-  <meta property="og:image" content="images/team.jpg">
+  <meta property="og:image" content="images/team.JPG">
   <meta property="og:url" content="index.html">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Home — OU Model UN">
   <meta name="twitter:description" content="Welcome to OU Model UN! We are dedicated to spreading awareness of global affairs, one student at a time.">
-  <meta name="twitter:image" content="images/team.jpg">
+  <meta name="twitter:image" content="../images/team.JPG">
 </head>
 <body>
 <header class="site-header">
@@ -30,10 +31,11 @@
     <a class="home active" href="index.html" aria-label="Home">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 2 12h3v9h5v-6h4v6h5v-9h3z"/></svg>
     </a>
-    <a href="about.html">About Us</a>
-    <a href="social.html">Social Media</a>
-    <a href="contact.html">Contact</a>
-    <form class="search" role="search" action="search.html" method="get">
+    <a href="static/about.html">About Us</a>
+    <a href="variable/officers.html">Executive Team</a>
+    <a href="static/social.html">Social Media</a>
+    <a href="static/contact.html">Contact</a>
+    <form class="search" role="search" action="static/search.html" method="get">
       <label for="q" class="sr-only">Search</label>
       <input id="q" name="q" type="search" placeholder="Search">
       <button type="submit" aria-label="Submit search">
@@ -44,14 +46,13 @@
 </header>
 
 <nav class="sub-nav" aria-label="Sections">
-  <a href="conferences.html">Conferences</a>
-  <a href="officers.html">Executive Team</a>
-  <a href="new-to-mun.html">New to MUN?</a>
+  <a href="variable/conferences.html">Conferences</a>
+  <a href="static/new-to-mun.html">New to MUN?</a>
 </nav>
 
 <main data-pagefind-body>
   <section class="hero">
-    <img class="hero-img" src="images/team.jpg" alt="">
+    <img class="hero-img" src="images/team.JPG" alt="">
     <h1>Welcome to OU Model UN!</h1>
   </section>
 
@@ -59,37 +60,31 @@
     <h2>Educating the next generation of global leaders, one simulation at a time.</h2>
     <h3>Our Mission</h3>
     <p>We are dedicated to providing a platform for students to engage with global issues and develop their leadership skills.</p>
-    <a class="more" href="about.html">Learn more about us <span aria-hidden="true">&#9656;</span></a>
+    <a class="more" href="static/about.html">Learn more about us <span aria-hidden="true">&#9656;</span></a>
   </section>
  
   <section class="conferences">
     <h2>Conferences We Host</h2>
     <div class="conf-grid">
       <article class="conf-card card-clickable">
-        <img src="conf-1.jpg" alt="">
+        <img src="images/conf-1.JPG" alt="">
         <div class="conf-body">
-          <h3><a href="conferences.html">Halloween Invitational</a></h3>
-          <p>Norman, OK</p>
-          <p>October 24th, 2026</p>
-        </div>
-      </article>
-      <article class="conf-card card-clickable">
-        <img src="conf-2.jpg" alt="">
-        <div class="conf-body">
-          <h3><a href="conferences.html">High School Conference</a></h3>
+          <h3><a href="variable/conferences.html">High School Conference</a></h3>
           <p>Norman, OK</p>
           <p>TBD</p>
         </div>
       </article>
-    <article class="conf-card card-clickable">
-        <img src="conf-3.jpg" alt="">
-        <div class="conf-body">
-          <h3><a href="conferences.html">[Conference name]</a></h3>
-          <p>[City, State]</p>
-          <p>[Dates]</p>
-        </div>
-      </article>
+  </section>
+
+  <section class="map-section">
+    <h2>Countries We've Represented</h2>
+    <p class="lead">Hover over or tap a country to see its name. Shaded countries are ones our delegates have represented in committee.</p>
+    <div class="map-wrap">
+      <div class="map-svg" role="img" aria-label="World map with the countries our delegates have represented shaded in crimson"></div>
+      <div class="map-tip" aria-hidden="true"></div>
     </div>
+    <p class="map-count"></p>
+    <ul class="country-list"></ul>
   </section>
 </main>
 <footer class="site-footer">
@@ -102,10 +97,10 @@
       <h3>Explore</h3>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="conferences.html">Conferences</a></li>
-        <li><a href="officers.html">Executive Team</a></li>
-        <li><a href="new-to-mun.html">New to MUN?</a></li>
+        <li><a href="static/about.html">About Us</a></li>
+        <li><a href="variable/conferences.html">Conferences</a></li>
+        <li><a href="variable/officers.html">Executive Team</a></li>
+        <li><a href="static/new-to-mun.html">New to MUN?</a></li>
       </ul>
     </nav>
     <div>
@@ -113,13 +108,15 @@
       <ul>
         <li><a href="https://www.instagram.com/oklahoma_model_un/" target="_blank" rel="noopener">Instagram</a></li>
         <li><a href="mailto:oklahomamodelun@gmail.com">oklahomamodelun@gmail.com</a></li>
-        <li><a href="contact.html">Contact form</a></li>
-        <li><a href="social.html">Social Media</a></li>
+        <li><a href="static/contact.html">Contact form</a></li>
+        <li><a href="static/social.html">Social Media</a></li>
       </ul>
     </div>
   </div>
-   <p class="footer-bottom">&copy; 2026 OU Model UN</p>
-  <p> Web Design by <a href="https://www.jpitt.net" target="_blank" rel="noopener">Joseph Pittenger</a></p>
+  <div class="footer-bottom">
+  <p>&copy; 2026 OU Model UN</p>
+  <p>Web Design by <a href="https://www.jpitt.net" target="_blank" rel="noopener">Joseph Pittenger</a></p>
+</div>
 </footer>
 </body>
 </html>

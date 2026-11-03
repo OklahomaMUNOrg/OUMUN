@@ -2,7 +2,7 @@ name: Build search index and deploy
 
 on:
   push:
-    branches: [pagePopulation, main]
+    branches: [restructuring, main]
   workflow_dispatch:
 
 permissions:
