@@ -2,8 +2,6 @@
 // To update the map, add country names to this list. Use the names exactly as the map shows them
 // (hover over a country to see its name), for example 'United States of America' or 'Dem. Rep. Congo'.
 const REPRESENTED = [
-  // 'France',
-  // 'Japan',
   'Ukraine',
   'China',
   'France',
@@ -16,7 +14,7 @@ if (mapWrap) {
   const tip = mapWrap.querySelector('.map-tip');
 
   // The map drawing lives in images/world-map.svg and is loaded in here so each country can be styled.
-  fetch('images/world-map.svg')
+  fetch('../images/world-map.svg')
     .then(res => { if (!res.ok) throw new Error(res.status); return res.text(); })
     .then(svgText => { holder.innerHTML = svgText; setupMap(); })
     .catch(() => {
