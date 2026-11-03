@@ -109,7 +109,7 @@ h1, h2, h3 { font-family: var(--font-display); }
 
 /* Slow zoom on hero photos */
 @keyframes slow-zoom { from { transform: scale(1); } to { transform: scale(1.1); } }
-.hero-img, .page-hero-img { animation: slow-zoom 18s ease-out forwards; }
+.hero-img, .page-hero-img { animation: slow-zoom 30s ease-out forwards; }
 @media (prefers-reduced-motion: reduce) { .hero-img, .page-hero-img { animation: none; } }
 
 /* About: alternating photo and text bands */
