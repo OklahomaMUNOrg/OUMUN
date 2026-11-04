@@ -2,8 +2,10 @@
 // To update the map, add country names to this list. Use the names exactly as the map shows them
 // (hover over a country to see its name), for example 'United States of America' or 'Dem. Rep. Congo'.
 const REPRESENTED = [
-  // 'France',
-  // 'Japan',
+  'Ukraine',
+  'China',
+  'France',
+  'India'
 ];
 
 const mapWrap = document.querySelector('.map-wrap');

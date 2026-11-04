@@ -89,7 +89,7 @@ h1, h2, h3 { font-family: var(--font-display); }
 /* Page title banners with photo */
 .page-hero {
   position: relative; overflow: hidden; display: flex; align-items: center;
-  height: 280px; background: #3b1a1c; border-bottom: 6px solid var(--blue-light);
+  height: 400px; background: #3b1a1c; border-bottom: 6px solid var(--blue-light);
 }
 .page-hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .page-hero::after { content: ""; position: absolute; inset: 0; background: rgba(59, 26, 28, 0.6); }
@@ -109,8 +109,8 @@ h1, h2, h3 { font-family: var(--font-display); }
 
 /* Slow zoom on hero photos */
 @keyframes slow-zoom { from { transform: scale(1); } to { transform: scale(1.1); } }
-.hero-img, .page-hero-img { animation: slow-zoom 30s ease-out forwards; }
-@media (prefers-reduced-motion: reduce) { .hero-img, .page-hero-img { animation: none; } }
+.hero-img { animation: slow-zoom 30s ease-out forwards; }
+@media (prefers-reduced-motion: reduce) { .hero-img { animation: none; } }
 
 /* About: alternating photo and text bands */
 .about-intro { padding-bottom: 48px; }
@@ -253,3 +253,40 @@ h1, h2, h3 { font-family: var(--font-display); }
 .officer:focus-visible { outline: 3px solid var(--blue-light); outline-offset: 2px; }
 .officer:focus-visible .bio, .officer.open .bio { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .officer .bio { transition: none; transform: none; } }
+
+/* Conference pages */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+.conf-banner { position: relative; display: flex; align-items: flex-end; height: 190px; overflow: hidden; background: #3b1a1c; }
+.conf-banner img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.conf-banner::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(59, 26, 28, 0.85), rgba(59, 26, 28, 0.3)); }
+.conf-banner h2 { position: relative; z-index: 1; width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 8% 32px; color: #fff; font-size: clamp(30px, 4vw, 48px); font-weight: 700; }
+.conf-main { padding-top: 48px; padding-bottom: 64px; }
+
+.conf-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 0 0 32px; }
+.conf-facts > div { padding: 18px 20px; background: var(--tint); border-left: 4px solid var(--blue); }
+.tint-wrap .conf-facts > div { background: #fff; }
+.conf-facts dt { margin-bottom: 4px; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6060; }
+.conf-facts dd { margin: 0; font-size: 18px; font-weight: 600; }
+
+.conf-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 40px; }
+.btn { display: inline-block; padding: 14px 28px; border: 2px solid var(--crimson); border-radius: 4px; background: var(--crimson); color: #fff; font-size: 16px; font-weight: 700; }
+.btn:hover { border-color: #6a1112; background: #6a1112; color: #fff; }
+.btn-outline { background: transparent; color: var(--crimson); }
+.btn-outline:hover { background: var(--crimson); color: #fff; }
+
+.conf-sub { margin: 48px 0 16px; font-size: clamp(22px, 2.5vw, 28px); }
+.card h4 { margin: 0 0 8px; font-family: var(--font-display); font-size: 18px; }
+
+.schedule-wrap { overflow-x: auto; }
+.schedule { width: 100%; border-collapse: collapse; background: #fff; }
+.schedule th, .schedule td { padding: 14px 16px; border-bottom: 1px solid var(--gray); text-align: left; }
+.schedule thead th { background: var(--crimson); color: #fff; font-weight: 600; }
+.schedule td:first-child { width: 1%; font-weight: 600; white-space: nowrap; }
+
+.venue-map iframe { display: block; width: 100%; height: 360px; border: 0; }
+.map-box { display: flex; align-items: center; justify-content: center; min-height: 320px; padding: 24px; background: var(--gray); color: #4a4343; text-align: center; }
+.directions, .back-top { font-weight: 600; color: var(--blue); }
+.back-top { display: inline-block; margin-top: 32px; }
+.conf-main .faq-list { max-width: 820px; }
