@@ -2,7 +2,7 @@ name: Build search index and deploy
 
 on:
   push:
-    branches: [prerelease, main]
+    branches: [premeet, main]
   workflow_dispatch:
 
 permissions:
