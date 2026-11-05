@@ -2,7 +2,7 @@ name: Build search index and deploy
 
 on:
   push:
-    branches: [premeet, main]
+    branches: [preMiniCollege, main]
   workflow_dispatch:
 
 permissions:
