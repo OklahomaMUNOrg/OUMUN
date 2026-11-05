@@ -43,3 +43,17 @@ if (officerCards.length && window.matchMedia('(hover: none)').matches) {
     if (!e.target.closest('.officer')) officerCards.forEach(o => o.classList.remove('open'));
   });
 }
+
+// Conferences dropdown: click or tap the tab to open or close it (it also opens on hover with a mouse).
+document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+  const button = dropdown.querySelector('.dropdown-toggle');
+  const setOpen = (open) => {
+    dropdown.classList.toggle('open', open);
+    button.setAttribute('aria-expanded', String(open));
+  };
+  button.addEventListener('click', () => setOpen(!dropdown.classList.contains('open')));
+  document.addEventListener('click', (e) => { if (!dropdown.contains(e.target)) setOpen(false); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && dropdown.classList.contains('open')) { setOpen(false); button.focus(); }
+  });
+});

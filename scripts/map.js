@@ -5,7 +5,15 @@ const REPRESENTED = [
   'Ukraine',
   'China',
   'France',
-  'India'
+  'India',
+  'Russia',
+  'Iran',
+  'Nigeria',
+  'Canada',
+  'Brazil',
+  'Argentina',
+  'Pakistan',
+  'Guyana'
 ];
 
 const mapWrap = document.querySelector('.map-wrap');

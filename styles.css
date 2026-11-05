@@ -290,3 +290,30 @@ html { scroll-behavior: smooth; }
 .directions, .back-top { font-weight: 600; color: var(--blue); }
 .back-top { display: inline-block; margin-top: 32px; }
 .conf-main .faq-list { max-width: 820px; }
+
+/* --- Conferences dropdown (gray bar) --- */
+.sub-nav .nav-dropdown { position: relative; }
+.dropdown-toggle { display: flex; align-items: center; gap: 10px; padding: 26px 24px; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; }
+.dropdown-toggle:hover { background: #e3dfdb; }
+.dropdown-toggle:focus-visible { outline: 3px solid var(--blue-light); outline-offset: -3px; }
+.caret { width: 0; height: 0; margin-top: 4px; border: 5px solid transparent; border-top-color: currentColor; transition: transform 0.2s; }
+.nav-dropdown.open .caret { transform: rotate(180deg) translateY(4px); }
+.dropdown-menu { position: absolute; top: 100%; left: 0; z-index: 20; display: none; min-width: 280px; margin: 0; padding: 0; list-style: none; background: #fff; border-top: 4px solid var(--crimson); box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18); }
+.nav-dropdown.open .dropdown-menu { display: block; }
+@media (hover: hover) { .nav-dropdown:hover .dropdown-menu { display: block; } }
+.dropdown-menu a { display: block; padding: 16px 24px; border-bottom: 1px solid var(--gray); font-size: 17px; font-weight: 600; }
+.dropdown-menu li:last-child a { border-bottom: 0; }
+.sub-nav .dropdown-menu .active { border-bottom: 1px solid var(--gray); background: var(--tint); }
+.sub-nav .dropdown-menu li:last-child .active { border-bottom: 0; }
+
+@media (max-width: 900px) {
+  .sub-nav .nav-dropdown { width: 100%; }
+  .dropdown-toggle { width: 100%; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid #cfc9c2; }
+  .dropdown-menu { position: static; min-width: 0; border-top: 0; background: transparent; box-shadow: none; }
+  .dropdown-menu a { padding: 12px 0 12px 16px; font-size: 16px; }
+  .nav-dropdown:hover .dropdown-menu { display: none; }
+  .nav-dropdown.open .dropdown-menu { display: block; }
+}
+
+/* Section headings on an individual conference page */
+.content .conf-sub { margin: 56px 0 16px; font-size: clamp(22px, 2.5vw, 30px); }
