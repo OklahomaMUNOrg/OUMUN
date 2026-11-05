@@ -12,7 +12,8 @@ const REPRESENTED = [
   'Canada',
   'Brazil',
   'Argentina',
-  'Pakistan'
+  'Pakistan',
+  'Guyana'
 ];
 
 const mapWrap = document.querySelector('.map-wrap');
