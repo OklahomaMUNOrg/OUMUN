@@ -326,7 +326,7 @@ html { scroll-behavior: smooth; }
 .awards-section { padding-top: 0; }
 
 /* Dropdown group labels (Hosted / Attended) */
-.dropdown-label { padding: 12px 24px 6px; background: var(--tint); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6060; }
+.dropdown-label { padding: 12px 24px 6px; background: var(#FFF); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6060; }
 @media (max-width: 900px) { .dropdown-label { padding: 12px 0 4px 16px; background: transparent; } }
 
 /* Conferences We Attend page */
