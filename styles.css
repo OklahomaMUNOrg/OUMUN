@@ -317,3 +317,27 @@ html { scroll-behavior: smooth; }
 
 /* Section headings on an individual conference page */
 .content .conf-sub { margin: 56px 0 16px; font-size: clamp(22px, 2.5vw, 30px); }
+
+/* Award history: uses the FAQ row style; this styles the table inside each year */
+.awards-table { width: 100%; margin: 0 0 22px; border-collapse: collapse; }
+.awards-table th, .awards-table td { padding: 12px 16px; border-bottom: 1px solid var(--gray); text-align: left; }
+.awards-table thead th { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6060; }
+.awards-table td:first-child { font-weight: 600; }
+.awards-section { padding-top: 0; }
+
+/* Dropdown group labels (Hosted / Attended) */
+.dropdown-label { padding: 12px 24px 6px; background: var(--tint); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6060; }
+@media (max-width: 900px) { .dropdown-label { padding: 12px 0 4px 16px; background: transparent; } }
+
+/* Conferences We Attend page */
+.attend-intro { padding-bottom: 24px; }
+.attend-jump { margin: 0; font-weight: 600; }
+.attend-jump a { color: var(--blue); }
+.attend-section { padding-top: 56px; }
+.attend-body { padding-bottom: 28px; }
+.attend-sub { margin: 28px 0 10px; font-size: 20px; }
+.attend-awards { margin: 0 0 8px; padding-left: 20px; line-height: 1.8; color: #4a4343; }
+.photo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+.photo-grid figure { margin: 0; }
+.photo-grid img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #d8d3ce; }
+.photo-grid figcaption { margin-top: 6px; font-size: 14px; color: #6b6060; }
