@@ -1,0 +1,21 @@
+{
+  "conference_name": "High School Conference",
+  "years": [
+    {
+      "year": "2027",
+      "awards": [
+        { "award": "[Award name]", "winner": "[Delegate name, school]", "committee": "[Committee]" },
+        { "award": "[Award name]", "winner": "[Delegate name, school]", "committee": "[Committee]" },
+        { "award": "[Award name]", "winner": "[Delegate name, school]", "committee": "[Committee]" }
+      ]
+    },
+    {
+      "year": "2026",
+      "awards": [
+        { "award": "[Award name]", "winner": "[Delegate name, school]", "committee": "[Committee]" },
+        { "award": "[Award name]", "winner": "[Delegate name, school]", "committee": "[Committee]" },
+        { "award": "[Award name]", "winner": "[Delegate name, school]", "committee": "[Committee]" }
+      ]
+    }
+  ]
+}

@@ -2,7 +2,7 @@ name: Build search index and deploy
 
 on:
   push:
-    branches: [preMiniCollege, main]
+    branches: [testJson, main]
   workflow_dispatch:
 
 permissions:
@@ -22,6 +22,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - name: Fill pages from the data files
+        run: python3 build.py
       - name: Build Pagefind search index
         run: npx -y pagefind --site .
       - uses: actions/configure-pages@v5

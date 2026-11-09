@@ -1,0 +1,85 @@
+{
+  "conferences": [
+    {
+      "id": "oru",
+      "name": "ORU",
+      "description": "A global crisis simulation conference hosted at Oral Roberts University.",
+      "years": [
+        {
+          "year": "2026",
+          "dates": "November 14th, 2026",
+          "location": "Tulsa, OK",
+          "delegation_size": "N/A",
+          "awards_won": "N/A",
+          "recap": "[Recap]",
+          "awards": [
+            { "award": "[Award name]", "winner": "[Delegate name]", "committee": "[Committee]" },
+            { "award": "[Award name]", "winner": "[Delegate name]", "committee": "[Committee]" }
+          ],
+          "photos": [
+            { "file": "oru-year1-1.jpg", "alt": "[Describe the photo]", "caption": "[Caption]" },
+            { "file": "oru-year1-2.jpg", "alt": "[Describe the photo]", "caption": "[Caption]" },
+            { "file": "oru-year1-3.jpg", "alt": "[Describe the photo]", "caption": "[Caption]" }
+          ]
+        },
+        {
+          "year": "[Previous year]",
+          "dates": "[Dates]",
+          "location": "[City, State]",
+          "delegation_size": "[Number of delegates]",
+          "awards_won": "[Number]",
+          "recap": "[Recap]",
+          "awards": [
+            { "award": "Outstanding Delegation", "winner": "OU Delegation", "committee": "The Delegation of China" },
+            { "award": "Outstanding Chief Diplomat", "winner": "Jordan Kennedy", "committee": "The Delegation of China" },
+            { "award": "Outstanding Press Secretary", "winner": "Aedan Gibbs", "committee": "The Delegation of China" }
+          ],
+          "photos": [
+            { "file": "oru-year2-1.jpg", "alt": "[Describe the photo]", "caption": "[Caption]" },
+            { "file": "oru-year2-2.jpg", "alt": "[Describe the photo]", "caption": "[Caption]" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "midwest-model-un",
+      "name": "Midwest Model UN",
+      "description": "A regional model United Nations conference held in St. Louis, Missouri.",
+      "years": [
+        {
+          "year": "2027",
+          "dates": "February 17th-20th, 2027",
+          "location": "St. Louis, MO",
+          "delegation_size": "N/A",
+          "awards_won": "N/A",
+          "recap": "[Recap]",
+          "awards": [
+            { "award": "[Award name]", "winner": "[Delegate name]", "committee": "[Committee]" },
+            { "award": "[Award name]", "winner": "[Delegate name]", "committee": "[Committee]" }
+          ],
+          "photos": [
+            { "file": "midwest-year1-1.jpg", "alt": "[Describe the photo]", "caption": "[Caption]" },
+            { "file": "midwest-year1-2.jpg", "alt": "[Describe the photo]", "caption": "[Caption]" },
+            { "file": "midwest-year1-3.jpg", "alt": "[Describe the photo]", "caption": "[Caption]" }
+          ]
+        },
+        {
+          "year": "[Previous year]",
+          "dates": "[Dates]",
+          "location": "[City, State]",
+          "delegation_size": "[Number of delegates]",
+          "awards_won": "[Number]",
+          "recap": "[Recap]",
+          "awards": [
+            { "award": "[Award name]", "winner": "[Delegate name]", "committee": "[Committee]" },
+            { "award": "[Award name]", "winner": "[Delegate name]", "committee": "[Committee]" }
+          ],
+          "photos": [
+            { "file": "midwest-year2-1.jpg", "alt": "[Describe the photo]", "caption": "[Caption]" },
+            { "file": "midwest-year2-2.jpg", "alt": "[Describe the photo]", "caption": "[Caption]" }
+          ]
+        }
+      ]
+    }
+  ]
+}
