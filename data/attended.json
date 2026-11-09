@@ -23,11 +23,11 @@
           ]
         },
         {
-          "year": "[Previous year]",
-          "dates": "[Dates]",
-          "location": "[City, State]",
-          "delegation_size": "[Number of delegates]",
-          "awards_won": "[Number]",
+          "year": "2025",
+          "dates": "November 21st, 2025",
+          "location": "Tulsa, OK",
+          "delegation_size": "N/A",
+          "awards_won": "3",
           "recap": "[Recap]",
           "awards": [
             { "award": "Outstanding Delegation", "winner": "OU Delegation", "committee": "The Delegation of China" },
@@ -64,7 +64,7 @@
           ]
         },
         {
-          "year": "[Previous year]",
+          "year": "2025",
           "dates": "[Dates]",
           "location": "[City, State]",
           "delegation_size": "[Number of delegates]",
