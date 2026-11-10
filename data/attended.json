@@ -65,10 +65,10 @@
         },
         {
           "year": "2025",
-          "dates": "[Dates]",
-          "location": "[City, State]",
-          "delegation_size": "[Number of delegates]",
-          "awards_won": "[Number]",
+          "dates": "February 17th-20th, 2025",
+          "location": "St. Louis, MO",
+          "delegation_size": "N/A",
+          "awards_won": "N/A",
           "recap": "[Recap]",
           "awards": [
             { "award": "[Award name]", "winner": "[Delegate name]", "committee": "[Committee]" },

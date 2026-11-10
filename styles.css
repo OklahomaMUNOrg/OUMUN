@@ -1,18 +1,19 @@
 :root {
   --crimson: #841617;
-  --ink: #1f1a1a;
-  --gray: #dad5cf;
+  --blue: #4e0002;
+  --gray: #f0f0f0;
+  --dark-gray: #323232;
   --tint: #f5ecec;
   --blue: #1f5fa8;
-  --blue-light: #4b92db;
+  --blue-light: #bcdceb;
   --pagefind-ui-primary: #841617;
   --pagefind-ui-text: #1f1a1a;
   --pagefind-ui-font: "Montserrat", Arial, sans-serif;
   --font-display: "Playfair Display", Georgia, serif;
 }
 * { box-sizing: border-box; }
-body { margin: 0; font-family: "Montserrat", Arial, sans-serif; color: var(--ink); background: #fff; }
-a { color: var(--ink); text-decoration: none; }
+body { margin: 0; font-family: "Montserrat", Arial, sans-serif; color: var(--dark-gray); background: #fff; }
+a { color: var(--dark-gray); text-decoration: none; }
 a:hover { color: var(--crimson); }
 .sr-only { position: absolute; left: -9999px; }
 
@@ -128,7 +129,7 @@ h1, h2, h3 { font-family: var(--font-display); }
 }
 
 /* Footer */
-.site-footer { margin-top: 0; padding: 64px 8% 28px; background: #2b1416; color: #e9dcdc; font-size: 15px; line-height: 1.6; }
+.site-footer { margin-top: 0; padding: 64px 8% 28px; background: var(--dark-gray); color: #e9dcdc; font-size: 15px; line-height: 1.6; }
 .site-footer a { color: #e9dcdc; }
 .site-footer a:hover { color: var(--blue-light); }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 48px; max-width: 1100px; margin: 0 auto; }
@@ -161,7 +162,7 @@ h1, h2, h3 { font-family: var(--font-display); }
 @media (prefers-reduced-motion: reduce) { .js .card-clickable.visible:hover, .js .card-clickable.visible:focus-within { transform: none; } }
 
 /* Clickable conference cards (home page): keep the title dark, turn crimson on hover */
-.conf-card.card-clickable a { color: var(--ink); font-weight: inherit; }
+.conf-card.card-clickable a { color: var(--dark-gray); font-weight: inherit; }
 .conf-card.card-clickable:hover a, .conf-card.card-clickable:focus-within a { color: var(--crimson); }
 
 /* Card icons (social page) */
