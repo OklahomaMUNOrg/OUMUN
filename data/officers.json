@@ -1,0 +1,85 @@
+{
+  "groups": [
+    {
+      "id": "executive",
+      "heading": "Meet the executive team!",
+      "intro": "Get to know the dedicated individuals leading our organization! Hover over or tap a card to read a short bio.",
+      "members": [
+        {
+          "name": "Jordan Kennedy",
+          "role": "President",
+          "photo": "president.png",
+          "bio": "\"I am a Senior at the University of Oklahoma, and am double majoring in International Studies and Political Science. I got involved in Model UN because of my passion for foreign affairs and educating people about the importance of the UN.\""
+        },
+        {
+          "name": "Sam Pritchard",
+          "role": "Secretary General",
+          "photo": "secretary-general.png",
+          "bio": "\"I am a Junior at the University of Oklahoma. I'm pursuing a B.S. in Psychology, and a minor degree in Latin along with a minor in film and media studies. I got involved with Model United Nations as an executive because I believe that it promotes research literacy as well as interpersonal skills in its members.\""
+        },
+        {
+          "name": "Ren Giusti",
+          "role": "Treasurer",
+          "photo": "treasurer.png",
+          "bio": "Short Biography"
+        },
+        {
+          "name": "Aziza Chugh",
+          "role": "Secretary",
+          "photo": "secretary.png",
+          "bio": "Short Biography"
+        },
+        {
+          "name": "Graham Harris",
+          "role": "Co-Ambassador",
+          "photo": "co-ambassador-2.png",
+          "bio": "\"I am a sophomore at the University of Oklahoma majoring in Economics-Pre Law with a minor in history! I got involved in Model United Nations due to my interest in geopolitics, in which this club allows you to truly experience working within a international diplomatic framework.\""
+        },
+        {
+          "name": "Nishant Shrivastava",
+          "role": "Co-Ambassador",
+          "photo": "co-ambassador-1.png",
+          "bio": "Short Biography"
+        }
+      ]
+    },
+    {
+      "id": "board",
+      "heading": "Meet the Board of Trustees!",
+      "intro": "Get to know the individuals assisting in the leadership of our organization! Hover over or tap a card to read a short bio.",
+      "members": [
+        {
+          "name": "Aedan Gibbons",
+          "role": "Board of Trustees Member 1",
+          "bio": "Short Biography"
+        },
+        {
+          "name": "Arian Bordbar",
+          "role": "Board of Trustees Member 2",
+          "bio": "Short Biography"
+        },
+        {
+          "name": "Jordan A. Tayar",
+          "role": "Board of Trustees Member 3",
+          "bio": "Short Biography"
+        },
+        {
+          "name": "Grayson Day",
+          "role": "Board of Trustees Member 4",
+          "bio": "Short Biography"
+        },
+        {
+          "name": "Joe Pittenger",
+          "role": "Board of Trustees Member 5",
+          "photo": "board-of-trustees-5.jpg",
+          "bio": "I am a freshman here at the University of Oklahoma majoring in meteorology and mathematics! I am involved in Model United Nations as I believe in the importance of multidisciplinary study, as well as being an informed global citizen."
+        },
+        {
+          "name": "Vacant",
+          "role": "Board of Trustees Member 6",
+          "bio": "Short Biography"
+        }
+      ]
+    }
+  ]
+}

@@ -127,6 +127,39 @@ def build_awards(data):
     return '<div class="faq-list">\n' + "\n".join(rows_html) + "\n</div>"
 
 
+# ---------- Executive Team and Board of Trustees ----------
+
+OFFICER_DEFAULT_PHOTO = "officer-placeholder.JPG"
+
+
+def build_officers(data):
+    sections = []
+    for g in data.get("groups", []):
+        need(g, ["id", "heading"], "A group in officers.json")
+        where = g.get("heading", "a group")
+        cards = []
+        for m in g.get("members", []):
+            need(m, ["name", "role"], f"{where}: a person")
+            name = m.get("name", "")
+            photo = m.get("photo") or OFFICER_DEFAULT_PHOTO
+            if m.get("photo") and not (ROOT / "images" / photo).exists():
+                errors.append(f'{where}: the photo "{photo}" for {name or "a person"} is not in the images folder.')
+            alt = m.get("alt") or f"Photo of {name}"
+            bio = m.get("bio") or "Short Biography"
+            cards.append(
+                '<article class="card officer" tabindex="0">'
+                f'<div class="officer-photo"><img src="../images/{e(photo)}" alt="{e(alt)}">'
+                f'<p class="bio">{e(bio)}</p></div>'
+                f'<h3>{e(name)}</h3><p class="role">{e(m.get("role", ""))}</p></article>'
+            )
+        intro = f'<p class="lead">{e(g["intro"])}</p>' if g.get("intro") else ""
+        sections.append(
+            f'<section class="content" id="{e(g.get("id", ""))}"><h2>{e(g.get("heading", ""))}</h2>{intro}'
+            f'<div class="card-grid">\n' + "\n".join(cards) + "\n</div></section>"
+        )
+    return "\n".join(sections)
+
+
 # ---------- Writing into the pages ----------
 
 def fill(page, marker, html):
@@ -145,6 +178,7 @@ def fill(page, marker, html):
 def main():
     attended = load("attended.json")
     awards = load("hs-awards.json")
+    officers = load("officers.json")
     if attended is not None:
         sections, jumps = build_attend(attended)
         if not errors:
@@ -154,6 +188,10 @@ def main():
         html = build_awards(awards)
         if not errors:
             fill("variable/high-school-conference.html", "hs-awards", html)
+    if officers is not None:
+        html = build_officers(officers)
+        if not errors:
+            fill("variable/officers.html", "officers", html)
     if errors:
         print("The pages were NOT updated. Please fix these problems:\n")
         for message in errors:
