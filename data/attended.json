@@ -30,26 +30,27 @@
             { "award": "[Award name]", "winner": "[Delegate name]", "committee": "[Committee]" }
           ],
           "photos": [
-            { "file": "oru-year1-1.jpg", "alt": "[Describe the photo]", "caption": "[Caption]" },
-            { "file": "oru-year1-2.jpg", "alt": "[Describe the photo]", "caption": "[Caption]" },
-            { "file": "oru-year1-3.jpg", "alt": "[Describe the photo]", "caption": "[Caption]" }
+            { "file": "oru-year2-1.jpeg", "alt": "The French Delegation", "caption": "Our French Delegation" },
+            { "file": "oru-year2-2.jpeg", "alt": "The Chinese Delegation", "caption": "Our Chinese Delegation" },
+            { "file": "oru-year2-3.jpeg", "alt": "The Indian Delegation", "caption": "Our Indian Delegation" },
+            { "file": "oru-year2-4.jpeg", "alt": "The Ukrainian Delegation", "caption": "Our Ukrainian Delegation" }
           ]
         },
         {
           "year": "2025",
           "dates": "November 21st, 2025",
           "location": "Tulsa, OK",
-          "delegation_size": "N/A",
+          "delegation_size": "8",
           "awards_won": "3",
           "recap": "[Recap]",
           "awards": [
-            { "award": "Outstanding Delegation", "winner": "OU Delegation", "committee": "The Delegation of China" },
+            { "award": "Distinguished Delegation", "winner": "OU Delegation", "committee": "The Delegation of China" },
             { "award": "Outstanding Chief Diplomat", "winner": "Jordan Kennedy", "committee": "The Delegation of China" },
             { "award": "Outstanding Press Secretary", "winner": "Aedan Gibbs", "committee": "The Delegation of China" }
           ],
           "photos": [
-            { "file": "oru-year2-1.jpg", "alt": "[Describe the photo]", "caption": "[Caption]" },
-            { "file": "oru-year2-2.jpg", "alt": "[Describe the photo]", "caption": "[Caption]" }
+            { "file": "oru-year1-1.png", "alt": "The Chinese Delegation", "caption": "Our Chinese Delegation" },
+            { "file": "oru-year1-2.png", "alt": "OU Delegation hard at work.", "caption": "Our Delegation at Work" }
           ]
         }
       ]
