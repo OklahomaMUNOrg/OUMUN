@@ -81,6 +81,19 @@
           "bio": "Short Biography"
         }
       ]
+    },
+    {
+      "id": "Mascot",
+      "heading": "Meet our most wonderful mascot, Gilbert!",
+      "intro": "Gilbert is our beloved mascot! He is a very important part of our organization, and is always there to cheer us on at conferences! We love him very much.",
+      "members": [
+        {
+          "name": "Gilbert",
+          "role": "Mascot",
+          "photo": "GILBERT.jpeg",
+          "bio": "Gilbert is our beloved mascot! He is a very important part of our organization, and is always there to cheer us on at conferences! We love him very much."
+        }
+      ]
     }
   ]
 }
