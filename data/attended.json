@@ -30,10 +30,10 @@
             { "award": "[Award name]", "winner": "[Delegate name]", "committee": "[Committee]" }
           ],
           "photos": [
-            { "file": "oru-year2-1.jpeg", "alt": "The French Delegation", "caption": "Our French Delegation" },
-            { "file": "oru-year2-2.jpeg", "alt": "The Chinese Delegation", "caption": "Our Chinese Delegation" },
-            { "file": "oru-year2-3.jpeg", "alt": "The Indian Delegation", "caption": "Our Indian Delegation" },
-            { "file": "oru-year2-4.jpeg", "alt": "The Ukrainian Delegation", "caption": "Our Ukrainian Delegation" }
+            { "file": "ORU-year2-1.jpeg", "alt": "The French Delegation", "caption": "Our French Delegation" },
+            { "file": "ORU-year2-2.jpeg", "alt": "The Chinese Delegation", "caption": "Our Chinese Delegation" },
+            { "file": "ORU-year2-3.jpeg", "alt": "The Indian Delegation", "caption": "Our Indian Delegation" },
+            { "file": "ORU-year2-4.jpeg", "alt": "The Ukrainian Delegation", "caption": "Our Ukrainian Delegation" }
           ]
         },
         {
@@ -49,8 +49,8 @@
             { "award": "Outstanding Press Secretary", "winner": "Aedan Gibbs", "committee": "The Delegation of China" }
           ],
           "photos": [
-            { "file": "oru-year1-1.png", "alt": "The Chinese Delegation", "caption": "Our Chinese Delegation" },
-            { "file": "oru-year1-2.png", "alt": "OU Delegation hard at work.", "caption": "Our Delegation at Work" }
+            { "file": "ORU-year1-1.png", "alt": "The Chinese Delegation", "caption": "Our Chinese Delegation" },
+            { "file": "ORU-year1-2.png", "alt": "OU Delegation hard at work.", "caption": "Our Delegation at Work" }
           ]
         }
       ]
