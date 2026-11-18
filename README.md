@@ -307,13 +307,13 @@ Do not delete the `CNAME` file. Check **Settings → Pages** on GitHub. The club
 
 | What | Details |
 | --- | --- |
-| GitHub organization | OklahomaMUNOrg. Owners: [The executive team] |
+| GitHub organization | OklahomaMUNOrg. Owners: The OUMUN Executive Team |
 | Repository | OUMUN |
-| Domain (oumun.org) | Registrar: [https://www.cloudflare.com/domains/]. Renewal date: [November 16th, 2027] |
-| Team email | oklahomamodelun@gmail.com. Managed by: [The executive team] |
-| Instagram | @oklahoma_model_un. Managed by: [The executive team] |
-| Flickr | [OUMUN]. Managed by: [The executive team] |
-| Who to ask for help | [Joseph Pittenger, joepittenger38@gmail.com] |
+| Domain (oumun.org) | Registrar: https://www.cloudflare.com/domains/. Renewal date: November 16th, 2027 |
+| Team email | oklahomamodelun@gmail.com. Managed by: The OUMUN Executive Team |
+| Instagram | @oklahoma_model_un. Managed by: The OUMUN Executive Team |
+| Flickr | [OUMUN]. Managed by: The OUMUN Executive Team |
+| Who to ask for help | Joseph Pittenger, joepittenger38@gmail.com |
 
 ---
 
