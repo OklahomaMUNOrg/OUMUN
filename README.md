@@ -6,7 +6,7 @@ This guide is for officers who need to update the site. You do **not** need to b
 
 ---
 
-## The three golden rules
+## The three main rules
 
 1. **Pages built from data files: edit the data file, not the HTML.** Officers, conferences attended, and high school awards all come from files in the `data/` folder. Changes made by hand between `BUILD` lines in the HTML get erased the next time the site is published.
 2. **After every change, check that it published.** Go to the **Actions** tab on GitHub. A green check means the site updated. A red X means something needs fixing (see [Troubleshooting](#troubleshooting)).
@@ -32,7 +32,7 @@ This guide is for officers who need to update the site. You do **not** need to b
 
 ## How the site works
 
-It is a simple website: plain HTML, CSS, and a little JavaScript, with no framework. Two small tools run automatically when the site is published:
+It is a fairly simple website, made up of plain HTML, CSS, JavaScript, Python, and JSON. Two small tools run automatically when the site is published:
 
 - **`build.py`** reads the files in `data/` and fills the matching pages with cards, tables, and photos.
 - **Pagefind** builds the search index so the search bar works.
@@ -77,7 +77,7 @@ Open `variable/officers.html` and look for these two lines:
 <!-- /BUILD:officers -->
 ```
 
-Everything between those lines is generated from `data/officers.json` every time the site is published. **Do not type anything between them.** Change the data file instead.
+Everything between those lines is generated from `data/officers.json` every time the site is published. **Do not type anything between them.** Change the data (JSON) file instead.
 
 ---
 
@@ -105,7 +105,7 @@ Everything between those lines is generated from `data/officers.json` every time
 
 ## Editing the data files
 
-These files are JSON. It looks fussy but follows a few simple rules:
+These files are JSON. It looks annoying but follows a few simple rules:
 
 - Text goes in **straight double quotes**: `"like this"`.
 - Items in a list are separated by **commas**, but there is **no comma after the last item**.
@@ -226,8 +226,8 @@ The Social page has a "Latest photos" band that shows the 3 newest photos from o
   - `data-tag`: optional. Only show photos with this tag (for example `oumun`).
 - Only **public** photos appear.
 - The band stays hidden if no ID is set or Flickr cannot be reached, so visitors never see something broken.
-- Free Flickr accounts have a limit of 1,000 photos in total. Pro removes it.
-- Photos are shown as squares. Give your best photos a short title on Flickr, because the title is used as the picture's description for screen readers.
+- Free Flickr accounts have a limit of 1,000 photos in total. 
+- Photos are shown as squares. Give these a title, because the title is used as the picture's description for screen readers.
 
 ---
 
@@ -247,7 +247,7 @@ The map on the home page highlights the countries we have represented. To update
 
 ---
 
-## Adding a new page
+## Adding a new page (this is a lengthy process!)
 
 1. **Copy** a similar page: from `static/` for a page you will write by hand, or from `variable/` for one filled from data.
 2. Change the page title, the heading, and the content. Also update the `og:title`, `og:description`, and `og:url` lines near the top (they control how the page looks when shared).
@@ -295,7 +295,7 @@ Do not delete the `CNAME` file. Check **Settings → Pages** on GitHub. The club
 
 ---
 
-## Look and feel
+## Look and feel (CSS)
 
 - **Colors** (set at the top of `styles.css`): crimson `#841617`, dark crimson `#4e0002`, light tint `#f5ecec`, gray `#323232`.
 - **Fonts:** Montserrat for text and Playfair Display for headings, both from Google Fonts.
