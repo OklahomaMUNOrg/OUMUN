@@ -1,7 +1,7 @@
 (function () {
   var feed = document.getElementById('flickr-feed');
   if (!feed) return;
-  var section = feed.closest('section');
+  var section = feed.closest('[hidden]');
   var id = (feed.dataset.flickrId || '').trim();
   var count = parseInt(feed.dataset.count, 10) || 6;
   var tag = (feed.dataset.tag || '').trim();
@@ -17,6 +17,11 @@
       if (!ok || (u.protocol !== 'https:' && u.protocol !== 'http:')) return null;
       return 'https://' + host + u.pathname + u.search;
     } catch (e) { return null; }
+  }
+
+  // Flickr image URLs end in a size letter: _c = 800px, _z = 640px, _m = 240px.
+  function sizesFor(small) {
+    return [small.replace(/_m\.jpg$/, '_c.jpg'), small.replace(/_m\.jpg$/, '_z.jpg'), small];
   }
 
   // Camera filenames like IMG_4521 make poor alt text.
@@ -44,13 +49,17 @@
       var img = document.createElement('img');
       img.alt = altFor(item.title);
       img.loading = 'lazy';
-      // Ask for the 640px version; fall back to the always-available small one.
+      // Ask for the 800px version, then 640px, then the always-available small one.
+      img.dataset.base = small;
+      img.dataset.step = '0';
       img.onerror = function () {
-        this.onerror = null;
-        this.src = this.dataset.fallback;
+        var list = sizesFor(this.dataset.base);
+        var next = parseInt(this.dataset.step, 10) + 1;
+        if (next >= list.length) { this.onerror = null; return; }
+        this.dataset.step = String(next);
+        this.src = list[next];
       };
-      img.dataset.fallback = small;
-      img.src = small.replace(/_m\.jpg$/, '_z.jpg');
+      img.src = sizesFor(small)[0];
       a.appendChild(img);
       fig.appendChild(a);
       feed.appendChild(fig);
