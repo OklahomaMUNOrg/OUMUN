@@ -21,7 +21,7 @@
           "name": "Ren Giusti",
           "role": "Treasurer",
           "photo": "treasurer.png",
-          "bio": "Short Biography"
+          "bio": "I am a senior double majoring in Political Science and International Studies. My involvement in Model UN comes from my prolonged interest in international politics. Outside of MUN, I love playing/watching soccer and traveling."
         },
         {
           "name": "Aziza Chugh",
@@ -51,7 +51,8 @@
         {
           "name": "Aedan Gibbons",
           "role": "Board of Trustees Member 1",
-          "bio": "Short Biography"
+          "photo": "board-of-trustees-1.jpeg",
+          "bio": "I am a sophomore at the University of Oklahoma, pre-law, and majoring in history. I have a passion for history, politics, philosophy, diplomacy, and debate, which is why I chose to be involved in MUN."
         },
         {
           "name": "Arian Bordbar",
@@ -78,6 +79,19 @@
           "name": "Megan Garrett",
           "role": "Board of Trustees Member 6",
           "bio": "Short Biography"
+        }
+      ]
+    },
+    {
+      "id": "Mascot",
+      "heading": "Meet our most wonderful mascot, Gilbert!",
+      "intro": "Gilbert is our beloved mascot! He is a very important part of our organization, and is always there to cheer us on at conferences! We love him very much.",
+      "members": [
+        {
+          "name": "Gilbert",
+          "role": "Mascot",
+          "photo": "GILBERT.jpeg",
+          "bio": "Gilbert is our beloved mascot! He is a very important part of our organization, and is always there to cheer us on at conferences! We love him very much."
         }
       ]
     }

@@ -2,7 +2,7 @@ name: Build search index and deploy
 
 on:
   push:
-    branches: [testJson, main]
+    branches: [moreEdits, main]
   workflow_dispatch:
 
 permissions:

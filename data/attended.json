@@ -18,38 +18,36 @@
             { "award": "Distinguished Head of State", "winner": "Jordan Kennedy", "committee": "The Delegation of India" },
             { "award": "Distinguished Head of State", "winner": "Aedan Gibbs", "committee": "The Delegation of France" },
             { "award": "Distinguished Press Secretary", "winner": "Eli Wortman", "committee": "The Delegation of Ukraine" },
+            { "award": "Distinguished Press Secretary", "winner": "Grayson Day", "committee": "The Delegation of China" },
             { "award": "Distinguished Chief Diplomat", "winner": "Aeryn Shields", "committee": "The Delegation of China" },
             { "award": "Distinguished Trade Representative", "winner": "Sam Pritchard", "committee": "The Delegation of India" },
-            { "award": "[Award name]", "winner": "[Delegate name]", "committee": "[Committee]" },
-            { "award": "[Award name]", "winner": "[Delegate name]", "committee": "[Committee]" },
-            { "award": "[Award name]", "winner": "[Delegate name]", "committee": "[Committee]" },
-            { "award": "[Award name]", "winner": "[Delegate name]", "committee": "[Committee]" },
-            { "award": "[Award name]", "winner": "[Delegate name]", "committee": "[Committee]" },
-            { "award": "Distinguished Delegation", "winner": "OU Delegation", "committee": "The Delegation of China" },
-            { "award": "[Award name]", "winner": "[Delegate name]", "committee": "[Committee]" },
-            { "award": "[Award name]", "winner": "[Delegate name]", "committee": "[Committee]" }
+            { "award": "Distinguished Security Advisor", "winner": "Aziza Chugh", "committee": "The Delegation of India" },
+            { "award": "Honorable Mention Delegation", "winner": "OU Delegation", "committee": "The Delegation of China" },
+            { "award": "Distinguished Delegation", "winner": "OU Delegation", "committee": "The Delegation of India" },
+            { "award": "Distinguished Delegation", "winner": "OU Delegation", "committee": "The Delegation of France" }
           ],
           "photos": [
-            { "file": "oru-year1-1.jpg", "alt": "[Describe the photo]", "caption": "[Caption]" },
-            { "file": "oru-year1-2.jpg", "alt": "[Describe the photo]", "caption": "[Caption]" },
-            { "file": "oru-year1-3.jpg", "alt": "[Describe the photo]", "caption": "[Caption]" }
+            { "file": "ORU-year2-1.jpeg", "alt": "The French Delegation", "caption": "Our French Delegation" },
+            { "file": "ORU-year2-2.jpeg", "alt": "The Chinese Delegation", "caption": "Our Chinese Delegation" },
+            { "file": "ORU-year2-3.jpeg", "alt": "The Indian Delegation", "caption": "Our Indian Delegation" },
+            { "file": "ORU-year2-4.jpeg", "alt": "The Ukrainian Delegation", "caption": "Our Ukrainian Delegation" }
           ]
         },
         {
           "year": "2025",
           "dates": "November 21st, 2025",
           "location": "Tulsa, OK",
-          "delegation_size": "N/A",
+          "delegation_size": "8",
           "awards_won": "3",
-          "recap": "[Recap]",
+          "recap": "We had a great time participating in the ORU Global Crisis Simulation Conference! Our delegation of 8 students represented China. We were able to engage in high stakes crisis, and pulled out 3 award winners! We are so proud of our delegation and can't wait to attend again next year!",
           "awards": [
-            { "award": "Outstanding Delegation", "winner": "OU Delegation", "committee": "The Delegation of China" },
+            { "award": "Distinguished Delegation", "winner": "OU Delegation", "committee": "The Delegation of China" },
             { "award": "Outstanding Chief Diplomat", "winner": "Jordan Kennedy", "committee": "The Delegation of China" },
             { "award": "Outstanding Press Secretary", "winner": "Aedan Gibbs", "committee": "The Delegation of China" }
           ],
           "photos": [
-            { "file": "oru-year2-1.jpg", "alt": "[Describe the photo]", "caption": "[Caption]" },
-            { "file": "oru-year2-2.jpg", "alt": "[Describe the photo]", "caption": "[Caption]" }
+            { "file": "ORU-year1-1.png", "alt": "The Chinese Delegation", "caption": "Our Chinese Delegation" },
+            { "file": "ORU-year1-2.png", "alt": "OU Delegation hard at work.", "caption": "Our Delegation at Work" }
           ]
         }
       ]
