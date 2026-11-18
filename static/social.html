@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles.css">
 <script src="../scripts/script.js" defer></script>
+<script src="../scripts/flickr.js" defer></script>
 <link rel="icon" type="image/png" href="../images/logo.png">
   <meta property="og:title" content="Social Media — OU Model UN">
   <meta property="og:description" content="Follow the OU Model UN team on social media.">
@@ -46,15 +47,14 @@
 
 <nav class="sub-nav" aria-label="Sections">
   <div class="nav-dropdown">
-    <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="conf-menu">Conferences <span class="caret" aria-hidden="true"></span></button>
+    <button class="dropdown-toggle active" type="button" aria-expanded="false" aria-controls="conf-menu">Conferences <span class="caret" aria-hidden="true"></span></button>
     <ul class="dropdown-menu" id="conf-menu">
       <li class="dropdown-label">Hosted</li>
       <li><a href="../variable/high-school-conference.html">High School Conference</a></li>
       <li class="dropdown-label">Attended</li>
-      <li><a href="../variable/conferences-we-attend.html">Conferences We Attend</a></li>
+      <li><a href="../variable/conferences-we-attend.html" class="active">Conferences We Attend</a></li>
     </ul>
   </div>
-  <a href="../variable/events.html">Events</a>
   <a href="../static/new-to-mun.html">New to MUN?</a>
 </nav>
 
@@ -113,6 +113,12 @@
       </article>
     </div>
   </section>
+  <section class="content" id="photos" hidden>
+    <h2>Latest photos</h2>
+    <p class="lead">A look at our most recent photos from events and conferences.</p>
+    <div class="photo-grid" id="flickr-feed" data-flickr-id="204459446@N07" data-count="3" data-tag=""></div>
+    <p style="margin-top: 24px;"><a class="btn btn-outline" id="flickr-more" href="https://www.flickr.com/" target="_blank" rel="noopener">See all photos on Flickr</a></p>
+  </section>
 </main>
 
 <footer class="site-footer">
@@ -128,7 +134,6 @@
         <li><a href="../static/about.html">About Us</a></li>
         <li><a href="../variable/high-school-conference.html">High School Conference</a></li>
         <li><a href="../variable/conferences-we-attend.html">Conferences We Attend</a></li>
-        <li><a href="../variable/events.html">Events</a></li>
         <li><a href="../variable/officers.html">Executive Team</a></li>
         <li><a href="../static/new-to-mun.html">New to MUN?</a></li>
       </ul>
