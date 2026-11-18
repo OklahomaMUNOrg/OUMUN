@@ -349,3 +349,9 @@ html { scroll-behavior: smooth; }
 .photo-grid figure { margin: 0; }
 .photo-grid img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #d8d3ce; }
 .photo-grid figcaption { margin-top: 6px; font-size: 14px; color: #6b6060; }
+
+.flickr-section { max-width: 1400px; padding-left: 4%; padding-right: 4%; text-align: center; }
+  .flickr-section .lead { margin-left: auto; margin-right: auto; }
+  .flickr-grid { grid-template-columns: 1fr; gap: 24px; max-width: 560px; margin: 0 auto 40px; }
+  .flickr-grid img { aspect-ratio: 1 / 1; border-radius: 4px; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18); }
+  @media (min-width: 700px) { .flickr-grid { grid-template-columns: repeat(3, 1fr); max-width: none; } }
