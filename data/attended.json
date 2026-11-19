@@ -11,6 +11,7 @@
           "location": "Tulsa, OK",
           "delegation_size": "16",
           "awards_won": "12",
+          "countries": ["China", "France", "India", "Ukraine"],
           "recap": "We had a great time participating in the ORU Global Crisis Simulation Conference! Our delegation of 16 students represented France, China, India, and Ukraine. We were able to engage in high stakes crisis, and pulled out 12 award winners! We are so proud of our delegation and can't wait to attend again next year!",
           "awards": [
             { "award": "Outstanding Press Secretary", "winner": "Peyton Wright", "committee": "The Delegation of India" },
@@ -39,6 +40,7 @@
           "location": "Tulsa, OK",
           "delegation_size": "8",
           "awards_won": "3",
+          "countries": ["China"],
           "recap": "We had a great time participating in the ORU Global Crisis Simulation Conference! Our delegation of 8 students represented China. We were able to engage in high stakes crisis, and pulled out 3 award winners! We are so proud of our delegation and can't wait to attend again next year!",
           "awards": [
             { "award": "Distinguished Delegation", "winner": "OU Delegation", "committee": "The Delegation of China" },
@@ -92,5 +94,15 @@
         }
       ]
     }
+  ],
+  "other_countries": [
+    "Russia",
+    "Iran",
+    "Nigeria",
+    "Canada",
+    "Brazil",
+    "Argentina",
+    "Pakistan",
+    "Guyana"
   ]
 }

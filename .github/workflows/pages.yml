@@ -2,7 +2,7 @@ name: Build search index and deploy
 
 on:
   push:
-    branches: [moreEdits, main]
+    branches: [funTimes, main]
   workflow_dispatch:
 
 permissions:

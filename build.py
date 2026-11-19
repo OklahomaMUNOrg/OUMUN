@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import difflib
 import json
 import re
 import sys
@@ -106,6 +107,57 @@ def build_attend(data):
     return "\n\n".join(sections), " &middot; ".join(jumps)
 
 
+# ---------- Countries map (on the home page) ----------
+
+def map_country_names():
+    svg_path = ROOT / "images" / "world-map.svg"
+    if not svg_path.exists():
+        errors.append("images/world-map.svg is missing.")
+        return {}
+    names = re.findall(r'data-name="([^"]+)"', svg_path.read_text(encoding="utf-8"))
+    return {n.lower(): n for n in names}
+
+
+def build_countries(data):
+    """Every country we have represented, with the conference years it came from (if recorded)."""
+    on_map = map_country_names()
+    linked = {}  # country -> {conference name: [years]}
+
+    def check(name, where):
+        key = str(name).strip().lower()
+        if key in on_map:
+            return on_map[key]
+        close = difflib.get_close_matches(key, list(on_map), n=1, cutoff=0.6)
+        hint = f' Did you mean "{on_map[close[0]]}"?' if close else " Hover over the map to see how it spells that country."
+        errors.append(f'{where}: "{name}" is not a country on the map.{hint}')
+        return None
+
+    for conf in data.get("conferences", []):
+        conf_name = conf.get("name", "a conference")
+        for y in sorted(conf.get("years", []), key=lambda y: str(y.get("year", "")), reverse=True):  # newest first
+            year = str(y.get("year", "")).strip()
+            for name in y.get("countries") or []:
+                country = check(name, f"{conf_name} {year}")
+                if country:
+                    years = linked.setdefault(country, {}).setdefault(conf_name, [])
+                    if year not in years:
+                        years.append(year)
+
+    plain = set()
+    for name in data.get("other_countries") or []:
+        country = check(name, "other_countries")
+        if country and country not in linked:
+            plain.add(country)
+
+    items = []
+    for country in sorted(set(linked) | plain):
+        label = " \u00b7 ".join(f"{c} {', '.join(ys)}" for c, ys in linked.get(country, {}).items())
+        attrs = f' data-country="{e(country)}"' + (f' data-conferences="{e(label)}"' if label else "")
+        hidden = f'<span class="sr-only"> ({e(label)})</span>' if label else ""
+        items.append(f"<li{attrs}>{e(country)}{hidden}</li>")
+    return "\n".join(items)
+
+
 # ---------- Award history on a hosted conference page ----------
 
 def build_awards(data):
@@ -181,9 +233,11 @@ def main():
     officers = load("officers.json")
     if attended is not None:
         sections, jumps = build_attend(attended)
+        countries = build_countries(attended)
         if not errors:
             fill("variable/conferences-we-attend.html", "attend-jump", jumps)
             fill("variable/conferences-we-attend.html", "attend-conferences", sections)
+            fill("index.html", "countries", countries)
     if awards is not None:
         html = build_awards(awards)
         if not errors:
