@@ -233,7 +233,17 @@ The Social page has a "Latest photos" band that shows the 3 newest photos from o
 
 ## The countries map
 
-The map on the home page highlights the countries we have represented. To update it, open `scripts/map.js` and add the country's name to the `REPRESENTED` list near the top. Use the name exactly as the map spells it, in quotes with a comma after it.
+The map on the home page highlights the countries we have represented. To update it, open `data/attended.json` and add the countries name that was represented to the conference (and year) it was represented
+
+```json
+ "year": "2026",
+          "dates": "November 14th, 2026",
+          "location": "Tulsa, OK",
+          "delegation_size": "16",
+          "awards_won": "12",
+          "countries": ["China", "France", "India", "Ukraine"],
+```
+Adding a new country to `countries` will allow you to populate it on the map, and it will also display when and where it was represented! Countries not associated with a conference are at the bottom of the page. 
 
 ---
 
