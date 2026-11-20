@@ -44,6 +44,8 @@ index.html              Home page
 styles.css              All the colors, fonts, and layout for the whole site
 build.py                Fills data-driven pages from the data/ folder
 CNAME                   Tells GitHub our domain is oumun.org (do not delete)
+robots.txt              Allows agents to crawl through the website (for Google)
+sitemap.xml             Works with robots.txt to allow for agent crawling (for Google)
 
 data/                   The files you edit most often
   officers.json           Executive team + Board of Trustees
